@@ -46,8 +46,6 @@ Your output should look like this...
 # Estimator Function
 For estimating the grade, we assume that the grade is a linear function of the above factors. So it can be parameterized by
 
-<img src="staff/eqn1.png" width="300" />
-
 where x_0 is the **1** element you took in the first place of each students vector and x_1 to x_6 are the above factors. For having a reasonable estimation, we must just find appropriate values for w's (weights). Now implement **grade** function. It gets a vector of student features and a vector of weights and returns the estimated grade from the above formula. Prototype is 
 
 ``` c++
