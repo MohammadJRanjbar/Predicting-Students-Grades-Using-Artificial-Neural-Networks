@@ -1,21 +1,7 @@
-<center>
-<h1>
-In The Name Of ALLAH
-</h1>
-<h2>
-Advanced Programming - Homework 1
-</h2>
-<h2>
-Dr.Amir Jahanshahi
-</h2>
-<h3>
-Deadline: Friday, 9 Esfand - 23:00
-</center>
 
 #  Introduction
 
-In this homework, you're gonna code a program to estimate grade of a student in Dr.Jahanshahi's Advanced Programming course! Isn't that amazing?!
-
+In this homework, we're gonna code a program to estimate grade of a student in a Advanced Programming course
 After hours of analysis, we found that grade of a student in this course is effected by the following factors:
 
 
@@ -128,12 +114,6 @@ std::vector<double> load(const char*);
 # Prediction
 Last step is in front of you. Implement **predict** function such that it gets features of a new student and the weights obtained from the **train** function and predicts his or her grade. Your function should get features from user in proper messages.
 
-For a hard working or lazy student your function may estimate grades more than 20 or less than 0. What would you do to solve this?
-
 ```c++
 void predict(std::vector<double>, std::vector<double>);
 ```
-# main File
-You must not alter the main file at all. Just write all your codes in the **aphw1.cpp** and **aphw1.h**. Good luck!
-
-<img src="staff/MEME2.jpg" width="500" />
