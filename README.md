@@ -1,6 +1,6 @@
 
 #  Introduction
-
+this was a homework for dr.jahanshahi's Advanced Programming course and mr Amini (https://github.com/M-H-Amini) designed this homework
 In this homework, we're gonna code a program to estimate grade of a student in a Advanced Programming course
 After hours of analysis, we found that grade of a student in this course is effected by the following factors:
 
@@ -14,7 +14,6 @@ After hours of analysis, we found that grade of a student in this course is effe
 
 As a professional programmer, you're supposed to code something that, by learning from previous students and their grades, estimates grade of a new student (maybe yourself!) by having these factors of him or her!
 
-<img src="staff/MEME.jpg" width="400" class="center" />
 
 # Importing Data
 Data of previous students is gathered in **AP-Data.csv**. First of all, implement **getData** function such that it gets the path to the data file and returns a vector consisting of vectors of type double for data given. Each member of this returned vector, is itself a vector consisting of the features of a student. In the AP-Data file, each row is the information of a student. The first 6 numbers of each row are the 6 factors told above and the last number is the grade of the student.
@@ -44,8 +43,6 @@ void displayDataset(std::vector <std::vector <double >>);
 ```
 Your output should look like this...
 
-<img src="staff/F1.PNG" width="800" />
-
 # Estimator Function
 For estimating the grade, we assume that the grade is a linear function of the above factors. So it can be parameterized by
 
@@ -60,7 +57,6 @@ double grade(std::vector <double > w, std::vector <double > x);
 # Cost Function
 By having data of previous students, we form the following cost function.
 
-<img src="staff/eqn2.png" width="400" />
 
 **m** is the number of students in the dataset, **x**^(i) is the vector of features correspondeing to the i-th student **y^(i)** is the grade of the $i^{th}$ student. As you can see from this function, if you estimate grades properly, this function will get closer and closer to zero. Conversely, if your estimation isn't good enough, the cost function would blow up. So by minimizing this function and finding appropriate weights (w's) we can hope to have a good estimator. Isn't that brilliant?! 
 
@@ -73,13 +69,10 @@ double J(std::vector<double>, std::vector<std::vector<double>>);
 #  Finding Appropriate Weights
 It suffices now to find the weights that minimize the cost function so that we can hope to have a good estimator! As you now, to minimize a function, we can start from an arbitrary point and in each step, go in the opposite direction of the gradient at that point. First of all, we must find the partial derivative of the cost function with respect to each weight.
 
-<img src="staff/eqn3.png" width="600" />
 
-Now for minimizing the function, we use the following formula.
+Now for we minimize the function
 
-<img src="staff/eqn4.png" width="250" />
-
-In this relation, \alpha is the step size and is known as **learning rate**. It usually is a small positive constant number less 1 like 0.01 or 0.001. Actually, by selecting a proper learning rate, the above procedure will run iteratively so that our cost function be minimized more and more and we get the appropriate weights.
+In the relation, \alpha is the step size and is known as **learning rate**. It usually is a small positive constant number less 1 like 0.01 or 0.001. Actually, by selecting a proper learning rate, the above procedure will run iteratively so that our cost function be minimized more and more and we get the appropriate weights.
 
 Now you're supposed to implement the **train** function to do the above procedure. Arguments of the train function are
 
@@ -100,7 +93,6 @@ std::vector<double> train(std::vector<std::vector<double>>, std::vector<double>,
 # Displaying Output
 Now implement **displayOutput**. It gets data of previous students and the weight vector obtained from the **train** function. It must print the actual grade and the estimated grade of each student in each row in a beautiful manner like the following figure.
 
-<img src="staff/F2.PNG" width="800" />
 
 # Saving and Loading Weights
 Write **Save** and **Load** functions to be able to save and load the weights vector you got from the **train** function. **Save** gets the weights vector and a name and saves the weights in a file with given name in the *csv* format. **Load** gets the name of the file and return a vector containing the weights.
