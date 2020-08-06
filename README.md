@@ -47,7 +47,9 @@ The output looks like this
 
 # Estimator Function
 For estimating the grade, we assume that the grade is a linear function of the above factors. So it can be parameterized by
+
 <img src="Formula/eqn1.png" width="300" />
+
 where x_0 is the **1** element you took in the first place of each students vector and x_1 to x_6 are the above factors. For having a reasonable estimation, we must just find appropriate values for w's (weights). Now implement **grade** function. It gets a vector of student features and a vector of weights and returns the estimated grade from the above formula. Prototype is 
 
 ``` c++
@@ -56,6 +58,7 @@ double grade(std::vector <double > w, std::vector <double > x);
 
 # Cost Function
 By having data of previous students, we form the following cost function.
+
 <img src="Formula/eqn2.png" width="400" />
 
 **m** is the number of students in the dataset, **x**^(i) is the vector of features correspondeing to the i-th student **y^(i)** is the grade of the $i^{th}$ student. As you can see from this function, if you estimate grades properly, this function will get closer and closer to zero. Conversely, if your estimation isn't good enough, the cost function would blow up. So by minimizing this function and finding appropriate weights (w's) we can hope to have a good estimator. Isn't that brilliant?! 
@@ -68,10 +71,13 @@ double J(std::vector<double>, std::vector<std::vector<double>>);
 
 #  Finding Appropriate Weights
 It suffices now to find the weights that minimize the cost function so that we can hope to have a good estimator! As you now, to minimize a function, we can start from an arbitrary point and in each step, go in the opposite direction of the gradient at that point. First of all, we must find the partial derivative of the cost function with respect to each weight.
+
 <img src="Formula/eqn3.png" width="600" />
 
 Now for we minimize the function
+
 <img src="Formula/eqn4.png" width="250" />
+
 In the relation, \alpha is the step size and is known as **learning rate**. It usually is a small positive constant number less 1 like 0.01 or 0.001. Actually, by selecting a proper learning rate, the above procedure will run iteratively so that our cost function be minimized more and more and we get the appropriate weights.
 
 Now you're supposed to implement the **train** function to do the above procedure. Arguments of the train function are
@@ -92,6 +98,7 @@ std::vector<double> train(std::vector<std::vector<double>>, std::vector<double>,
 
 # Displaying Output
 Now implement **displayOutput**. It gets data of previous students and the weight vector obtained from the **train** function. It must print the actual grade and the estimated grade of each student in each row in a beautiful manner like the following figure.
+
 <img src="Formula/F2.PNG" width="800" />
 
 # Saving and Loading Weights
