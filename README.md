@@ -1,6 +1,7 @@
 
 #  Introduction
 this was a homework for dr.jahanshahi's Advanced Programming course and mr Amini (https://github.com/M-H-Amini) designed this homework
+
 In this homework, we're gonna code a program to estimate grade of a student in a Advanced Programming course
 After hours of analysis, we found that grade of a student in this course is effected by the following factors:
 
