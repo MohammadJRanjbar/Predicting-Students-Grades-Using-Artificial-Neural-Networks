@@ -43,7 +43,7 @@ Time for displaying imported data in a beautiful way! Implement **displayDataset
 void displayDataset(std::vector <std::vector <double >>);
 ```
 The output looks like this 
-<img src="Formula/F1.PNG" width="800" />
+[!Alt Text](https://github.com/MohammadJRanjbar/Predicting-Students-Grades-Using-Artificial-Neural-Networks/blob/master/Formula/F1.png?raw=true)
 
 # Estimator Function
 For estimating the grade, we assume that the grade is a linear function of the above factors. So it can be parameterized by
