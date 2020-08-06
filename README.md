@@ -43,6 +43,7 @@ Time for displaying imported data in a beautiful way! Implement **displayDataset
 void displayDataset(std::vector <std::vector <double >>);
 ```
 Your output should look like this...
+<img src="Formula/F1.PNG" width="800" />
 
 # Estimator Function
 For estimating the grade, we assume that the grade is a linear function of the above factors. So it can be parameterized by
@@ -52,7 +53,7 @@ where x_0 is the **1** element you took in the first place of each students vect
 ``` c++
 double grade(std::vector <double > w, std::vector <double > x);
 ```
-<img src="Formula/F1.PNG" width="800" />
+
 # Cost Function
 By having data of previous students, we form the following cost function.
 <img src="Formula/eqn2.png" width="400" />
