@@ -42,7 +42,7 @@ Time for displaying imported data in a beautiful way! Implement **displayDataset
 ``` c++
 void displayDataset(std::vector <std::vector <double >>);
 ```
-Your output should look like this...
+The output looks like this 
 <img src="Formula/F1.PNG" width="800" />
 
 # Estimator Function
